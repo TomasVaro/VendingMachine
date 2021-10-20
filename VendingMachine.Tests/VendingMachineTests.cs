@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using VendingMachine.Model;
 
 namespace VendingMachine.Tests
 {

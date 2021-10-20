@@ -4,18 +4,19 @@ using System.Text;
 
 namespace VendingMachine.Model
 {
-    class VendingMachine : IVending
+    public class VendingMachine : IVending
     {
         public string Product { get; set; }
         public int Price { get; set; }
-        public string Message { get; set; }
+        public string Description { get; set; }
 
-        public VendingMachine(string product, int price, string message)
+        public VendingMachine(string product, int price, string description)
         {
             Product = product;
             Price = price;
-            Message = message;
-        }
+            Description = description;
+        }        
+
         public void Purchase()
         {
             //To buy a product
