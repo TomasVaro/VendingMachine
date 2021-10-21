@@ -8,7 +8,7 @@ namespace VendingMachine.Model
     {
         void Purchase();
         void ShowAll();
-        void InserMoney();
+        Dictionary<int, int> InserMoney(int moneyAdded);
         void EndTransaction();
     }
 }
