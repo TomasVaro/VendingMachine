@@ -4,11 +4,12 @@ using System.Text;
 
 namespace VendingMachine.Model
 {
-    public interface IVending
+     interface IVending
     {
+        string welcomeInfo();
         void Purchase();
         void ShowAll();
         Dictionary<int, int> InserMoney(int moneyAdded);
-        void EndTransaction();
+        string EndTransaction(Dictionary<int, int> remainingMoney);
     }
 }

@@ -5,7 +5,13 @@ using VendingMachine.Model;
 
 namespace VendingMachine.Products
 {
-    class Drinks //: Product
+    public class Drinks : Product
     {
+        public Drinks(string productName, int price, string description)
+        {
+            ProductName = productName;
+            Price = price;
+            Description = description;
+        }
     }
 }

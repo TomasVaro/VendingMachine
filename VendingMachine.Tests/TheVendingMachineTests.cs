@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace VendingMachine.Tests
 {
-    public class VendingMachineTests
+    public class TheVendingMachineTests
     {
         [Fact]
         public void PurchaseTest()
@@ -32,7 +32,6 @@ namespace VendingMachine.Tests
         {
             //Arrange
             int moneyToAdd = 2231;
-            int[] denominations = new int[] { 1000, 500, 100, 50, 20, 10, 5, 1 };
             Dictionary<int, int> expected = new Dictionary<int, int>
             {
                 [1000] = 2,
@@ -45,7 +44,7 @@ namespace VendingMachine.Tests
                 [1] = 1,
             };
             //Act
-            Model.VendingMachine vendingMachine = new Model.VendingMachine(denominations);
+            Model.TheVendingMachine vendingMachine = new Model.TheVendingMachine();
             Dictionary<int, int> actual = vendingMachine.InserMoney(moneyToAdd);
             //Assert
             Assert.Equal(expected, actual);
@@ -55,10 +54,18 @@ namespace VendingMachine.Tests
         public void EndTransactionTest()
         {
             //Arrange
-
+            int remaining = 2231;
+            Model.TheVendingMachine vendingMachine = new Model.TheVendingMachine();
+            Dictionary<int, int> remainingMoney = vendingMachine.InserMoney(remaining);
+            string expected = "Money back:\nDenomination 1000 - 2 pcs\n" +
+                "Denomination 100 - 2 pcs\n" +
+                "Denomination 20 - 1 pcs\n" +
+                "Denomination 10 - 1 pcs\n" +
+                "Denomination 1 - 1 pcs\n";
             //Act
-
+            string actual = vendingMachine.EndTransaction(remainingMoney);
             //Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
