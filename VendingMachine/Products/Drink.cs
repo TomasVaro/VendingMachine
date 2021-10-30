@@ -5,21 +5,20 @@ using VendingMachine.Model;
 
 namespace VendingMachine.Products
 {
-    public class Food : Product
+    public class Drink : Product
     {
-        public Food(string productType,  string productName, int price, string description, int calories, int weight)
+        public Drink(string productType, string productName, int price, string description, int mililiter)
         {
             ProductType = productType;
             ProductName = productName;
             Price = price;
             Description = description;
-            Calories = calories;
-            Weight = weight;
+            Mililiter = mililiter;
         }
         //Shows the product's price and info
         public override string Examine(Product product)
         {
-            return $"{product.ProductName} - {product.ProductType}, {product.Weight} g, {product.Calories} kcal, {product.Price} kr each.";
+            return $"{product.ProductName} - {product.ProductType}, {product.Mililiter} ml, {product.Price} kr each.";
         }
         //Outputs a string message how to use the product
         public override string Use(Product product)

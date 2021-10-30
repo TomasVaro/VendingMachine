@@ -5,21 +5,21 @@ using VendingMachine.Model;
 
 namespace VendingMachine.Products
 {
-    public class Food : Product
+    public class Toy : Product
     {
-        public Food(string productType,  string productName, int price, string description, int calories, int weight)
+        public Toy(string productType, string productName, int price, string description, bool containsPlastic)
         {
             ProductType = productType;
             ProductName = productName;
             Price = price;
             Description = description;
-            Calories = calories;
-            Weight = weight;
+            ContainsPlastic = containsPlastic;
         }
         //Shows the product's price and info
         public override string Examine(Product product)
         {
-            return $"{product.ProductName} - {product.ProductType}, {product.Weight} g, {product.Calories} kcal, {product.Price} kr each.";
+            string containsPlastic = product.ContainsPlastic ? "Contains plastic" : "Doesn't contain plastic";
+            return $"{product.ProductName} - {product.ProductType}, {containsPlastic}, {product.Price} kr each.";
         }
         //Outputs a string message how to use the product
         public override string Use(Product product)
