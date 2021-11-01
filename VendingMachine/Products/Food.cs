@@ -21,7 +21,7 @@ namespace VendingMachine.Products
         //Shows the product's price and info
         public override string Examine(Product product)
         {
-            return $"{product.ProductName} - {product.ProductType}, {product.Weight} g, {product.Calories} kcal, {product.Price} kr each.";
+            return $"{product.ProductName} - {product.ProductType}, {Weight} g, {Calories} kcal, {product.Price} kr each.";
         }
         //Outputs a string message how to use the product
         public override string Use(Product product)

@@ -62,38 +62,10 @@ namespace VendingMachine.Model
                 foreach (Product products in vendingMachine.AllProducts)
                 {
                     counter++;
-                    if (products.ProductType == "Food")
-                    {
-                        Console.WriteLine(counter + " "
-                            + products.ProductName + "\t" 
-                            + products.Price + " kr\t"  
-                            + products.Calories + " kcal\t"
-                            + products.Weight + " gr"
-                            );
-                    }
-                    else if (products.ProductType == "Drink")
-                    {
-                        Console.WriteLine(counter + " "
+                    Console.WriteLine(counter + " "
                             + products.ProductName + "\t"
-                            + products.Price + " kr\t"
-                            + products.Mililiter + " mL"
-                            );
-                    }
-                    else if (products.ProductType == "Toy")
-                    {
-                        Console.Write(counter + " "
-                            + products.ProductName + "\t"
-                            + products.Price + " kr\t"
-                            );
-                        if (products.ContainsPlastic)
-                        {
-                            Console.WriteLine("Contains plastic");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Doesn't contain plastic");
-                        }
-                    }
+                            + products.ProductType + "\t"
+                            + products.Price + " kr\t");
                 }
                 succeded = true;
             }

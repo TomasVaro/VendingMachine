@@ -19,7 +19,7 @@ namespace VendingMachine.Products
         //Shows the product's price and info
         public override string Examine(Product product)
         {
-            string containsPlastic = product.ContainsPlastic ? "Contains plastic" : "Doesn't contain plastic";
+            string containsPlastic = ContainsPlastic ? "Contains plastic" : "Doesn't contain plastic";
             return $"{product.ProductName} - {product.ProductType}, {containsPlastic}, {product.Price} kr each.";
         }
         //Outputs a string message how to use the product
