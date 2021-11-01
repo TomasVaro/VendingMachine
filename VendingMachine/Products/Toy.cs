@@ -7,6 +7,7 @@ namespace VendingMachine.Products
 {
     public class Toy : Product
     {
+        public bool ContainsPlastic { get; set; }
         public Toy(string productType, string productName, int price, string description, bool containsPlastic)
         {
             ProductType = productType;

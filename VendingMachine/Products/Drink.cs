@@ -7,6 +7,7 @@ namespace VendingMachine.Products
 {
     public class Drink : Product
     {
+        public int Mililiter { get; set; }
         public Drink(string productType, string productName, int price, string description, int mililiter)
         {
             ProductType = productType;

@@ -7,6 +7,8 @@ namespace VendingMachine.Products
 {
     public class Food : Product
     {
+        public int Calories { get; set; }
+        public int Weight { get; set; }
         public Food(string productType,  string productName, int price, string description, int calories, int weight)
         {
             ProductType = productType;

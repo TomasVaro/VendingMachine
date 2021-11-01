@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VendingMachine.Model
 {
-     interface IVending
+    interface IVending
     {
         string WelcomeInfo();
         Dictionary<int, int> Purchase(Product product, Dictionary<int, int> moneyPool);
